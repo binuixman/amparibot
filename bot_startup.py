@@ -6,9 +6,9 @@ import random
 from cheapshark_query import *
 
 ## IRC Config
-server = "irc.cs.hut.fi" # Provide a valid server IP/Hostname
-port = 6668
-channel = "#polygame"
+server = ""      # IRC server address goes here
+port = 6667      # Server port
+channel = ""     # Channel to join goes here
 botnick = "amparibot"
 irc = IRC()
 irc.connect(server, port, channel, botnick)
