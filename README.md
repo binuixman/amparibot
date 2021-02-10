@@ -10,5 +10,4 @@ Currently, the bot can only query the list of games on script start up.
 
 ## TODO list
 
-- query games on set intervals
 - command to list games from a given store
