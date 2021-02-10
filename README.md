@@ -1,7 +1,7 @@
 # amparibot
 
-IRC bot that queries CheapShark API for free game deals.
-IRC portion of the code courtesy to https://www.techbeamers.com/create-python-irc-bot/.
+An IRC bot that queries CheapShark API for free game deals.
+The IRC portion of the code courtesy to https://www.techbeamers.com/create-python-irc-bot/.
 
 ## Usage
 
