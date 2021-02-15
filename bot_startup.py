@@ -28,6 +28,11 @@ while True:
         most_recent = curr
 
     if "PRIVMSG" in text and channel in text and "ämpäri?" in text:
+        if len(freegames) == 0:
+            header = "Ämpäreitä ei löytynyt :("
+            irc.send(channel, header)
+            continue
+        
         header = ":Tämän päivän ämpärit: "
         irc.send(channel, header)
 
