@@ -24,11 +24,10 @@ def get_free_games():
     for entry in res:
         store_dict.update(entry)
 
-    game_url = "https://www.cheapshark.com/api/1.0/deals"
+    game_url = "https://www.cheapshark.com/api/1.0/deals?upperPrice=0"
     games = get_dict_response(game_url)
     res = [(game['title'], store_dict[game['storeID']]) 
             for game in games 
-            if (game['salePrice'] == '0.00' 
-            and game['storeID'] in allowed_stores)]
+            if (game['storeID'] in allowed_stores)]
 
     return res
