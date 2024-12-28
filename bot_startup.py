@@ -16,18 +16,17 @@ irc.connect(server, port, channel, botnick)
 
 freegames = get_free_games()
 most_recent = time.time()
-interval = 3600  # Query interval in seconds
+interval = 300  # Query interval in seconds
 
 while True:
     text = irc.get_response()
     print(text)
-    
-    curr = time.time()
-    if curr - most_recent > interval:
-        freegames = get_free_games()
-        most_recent = curr
 
     if "PRIVMSG" in text and channel in text and "ämpäri?" in text:
+        curr = time.time()
+        if curr - most_recent > interval:
+            freegames = get_free_games()
+            most_recent = curr
         if len(freegames) == 0:
             header = "Ämpäreitä ei löytynyt :("
             irc.send(channel, header)
